@@ -16,8 +16,17 @@
               </block>
             </value>
             <next>
-              <block type="oled_color" id="83">
-                <field name="OBJECT">GREEN</field>
+              <block type="movement_stop" id="100">
+                <next>
+                  <block type="led_select" id="101" inline="true">
+                    <field name="ACTION">OFF</field>
+                    <value name="LED">
+                      <block type="math_number" id="102">
+                        <field name="NUM">5</field>
+                      </block>
+                    </value>
+                  </block>
+                </next>
               </block>
             </next>
           </block>

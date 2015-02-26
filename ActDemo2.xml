@@ -16,15 +16,24 @@
               </block>
             </value>
             <next>
-              <block type="movement_stop" id="6">
+              <block type="robot_delay" id="9" inline="true">
+                <value name="DELAY">
+                  <block type="math_number" id="10">
+                    <field name="NUM">1000</field>
+                  </block>
+                </value>
                 <next>
-                  <block type="led_select" id="7" inline="true">
-                    <field name="ACTION">OFF</field>
-                    <value name="LED">
-                      <block type="math_number" id="8">
-                        <field name="NUM">5</field>
+                  <block type="movement_stop" id="6">
+                    <next>
+                      <block type="led_select" id="7" inline="true">
+                        <field name="ACTION">OFF</field>
+                        <value name="LED">
+                          <block type="math_number" id="8">
+                            <field name="NUM">5</field>
+                          </block>
+                        </value>
                       </block>
-                    </value>
+                    </next>
                   </block>
                 </next>
               </block>
